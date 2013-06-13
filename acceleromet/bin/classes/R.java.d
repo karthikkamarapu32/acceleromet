@@ -1,0 +1,23 @@
+C:\Users\phonegap-2.7.0\phonegap-2.7.0\lib\android\bin\fourth\gen\org\apache\cordova\fourth\R.java \
+ : C:\Users\phonegap-2.7.0\phonegap-2.7.0\lib\android\bin\fourth\res\drawable\icon.png \
+C:\Users\phonegap-2.7.0\phonegap-2.7.0\lib\android\bin\fourth\res\drawable-hdpi\icon.png \
+C:\Users\phonegap-2.7.0\phonegap-2.7.0\lib\android\bin\fourth\res\drawable-hdpi\ic_launcher.png \
+C:\Users\phonegap-2.7.0\phonegap-2.7.0\lib\android\bin\fourth\res\drawable-ldpi\icon.png \
+C:\Users\phonegap-2.7.0\phonegap-2.7.0\lib\android\bin\fourth\res\drawable-ldpi\ic_launcher.png \
+C:\Users\phonegap-2.7.0\phonegap-2.7.0\lib\android\bin\fourth\res\drawable-mdpi\icon.png \
+C:\Users\phonegap-2.7.0\phonegap-2.7.0\lib\android\bin\fourth\res\drawable-mdpi\ic_launcher.png \
+C:\Users\phonegap-2.7.0\phonegap-2.7.0\lib\android\bin\fourth\res\drawable-xhdpi\icon.png \
+C:\Users\phonegap-2.7.0\phonegap-2.7.0\lib\android\bin\fourth\res\drawable-xhdpi\ic_launcher.png \
+C:\Users\phonegap-2.7.0\phonegap-2.7.0\lib\android\bin\fourth\res\layout\main.xml \
+C:\Users\phonegap-2.7.0\phonegap-2.7.0\lib\android\bin\fourth\res\values\strings.xml \
+C:\Users\phonegap-2.7.0\phonegap-2.7.0\lib\android\bin\fourth\res\xml\config.xml \
+C:\Users\phonegap-2.7.0\phonegap-2.7.0\lib\android\bin\fourth\bin\res\drawable\icon.png \
+C:\Users\phonegap-2.7.0\phonegap-2.7.0\lib\android\bin\fourth\bin\res\drawable-hdpi\icon.png \
+C:\Users\phonegap-2.7.0\phonegap-2.7.0\lib\android\bin\fourth\bin\res\drawable-hdpi\ic_launcher.png \
+C:\Users\phonegap-2.7.0\phonegap-2.7.0\lib\android\bin\fourth\bin\res\drawable-ldpi\icon.png \
+C:\Users\phonegap-2.7.0\phonegap-2.7.0\lib\android\bin\fourth\bin\res\drawable-ldpi\ic_launcher.png \
+C:\Users\phonegap-2.7.0\phonegap-2.7.0\lib\android\bin\fourth\bin\res\drawable-mdpi\icon.png \
+C:\Users\phonegap-2.7.0\phonegap-2.7.0\lib\android\bin\fourth\bin\res\drawable-mdpi\ic_launcher.png \
+C:\Users\phonegap-2.7.0\phonegap-2.7.0\lib\android\bin\fourth\bin\res\drawable-xhdpi\icon.png \
+C:\Users\phonegap-2.7.0\phonegap-2.7.0\lib\android\bin\fourth\bin\res\drawable-xhdpi\ic_launcher.png \
+C:\Users\phonegap-2.7.0\phonegap-2.7.0\lib\android\bin\fourth\bin\AndroidManifest.xml \

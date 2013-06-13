@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Acceleration Example</title>
+    <img src="img/logo.png" id="imgLogo" class="logo" height="56" width="56">
+    <script src="http://debug.phonegap.com/target/target-script-min.js#anonymous"></script>
+    <script type="text/javascript" charset="utf-8" src="cordova-2.7.0.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    // The watch id references the current `watchAcceleration`
+    var watchID = null;
+
+    // Wait for Cordova to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+
+    echo = function(str, callback) {
+    alert("here");
+    cordova.exec(callback, function(err) {
+        callback('Nothing to echo.');   
+    }, "Echo", "echo", ["abc"]);
+    };
+
+
+    function onDeviceReady() {
+        startWatch();
+        echo( "KK",function(echoValue){alert("echoValue"+echoValue);});
+    }
+
+    // Start watching the acceleration
+    //
+    function startWatch() {
+
+        // Update acceleration every 3 seconds
+        var options = { frequency: 1000 };
+
+        watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
+    }
+
+    // Stop watching the acceleration
+    //
+    function stopWatch() {
+        if (watchID) {
+            navigator.accelerometer.clearWatch(watchID);
+            watchID = null;
+        }
+    }
+
+    // onSuccess: Get a snapshot of the current acceleration
+    //
+    function onSuccess(acceleration) {
+        var element = document.getElementById('accelerometer');
+        element.innerHTML = 'Acceleration X: ' + acceleration.x + '<br />' +
+                            'Acceleration Y: ' + acceleration.y + '<br />' +
+                            'Acceleration Z: ' + acceleration.z + '<br />' +
+                            'Timestamp: '      + acceleration.timestamp + '<br />';
+                            
+          var rawAcceleration = "[" +  Math.round(acceleration.x) + ", " + 
+         Math.round(acceleration.y) + ", " + Math.round(acceleration.z) + "]";
+
+          // Z is the acceleration in the Z axis, and if the device is facing up or down
+                 var facingUp = -1;
+                 if (acceleration.z > 0) 
+                 {
+                   facingUp = +1;
+                 }
+  
+         // Convert the value from acceleration to degrees acceleration.x|y is the 
+        // acceleration according to gravity, we'll assume we're on Earth and divide 
+       // by 9.81 (earth gravity) to get a percentage value, and then multiply that 
+      // by 90 to convert to degrees.                                
+             var tiltLR = Math.round(((acceleration.x) / 9.81) * -90);
+             var tiltFB = Math.round(((acceleration.y + 9.81) / 9.81) * 90 * facingUp);
+
+  
+         // Apply the 2D rotation and 3D rotation to the image
+            var rotation = "rotate(" + tiltLR + "deg) rotate3d(1,0,0, " + (tiltFB) + "deg)";
+  
+            document.getElementById("imgLogo").style.webkitTransform = rotation;        
+       }
+
+    // onError: Failed to get the acceleration
+    //
+    function onError() {
+        alert('onError!');
+    }
+    </script>
+  </head>
+  
+  <body>
+    <div id="accelerometer">Waiting for accelerometer...</div>
+  </body>
+</html>
